@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h2>Welcome to NBA Game Picker!</h2>
+<p>Wanna spend the evening watching a historical NBA game, but not sure which game to choose? Don't worry, we'll help you! Please provide a few details below – and we'll find the game for you!</p>
+<p>For starters, tell us if you'd like to find a game by:</p>
+<a href="/team"><button class="btn btn-primary" type="submit" value="team">Team</button></a>
+<a href="/player"><button class="btn btn-primary" type="submit" value="player">Player</button></a>
+<br>
+<br>
+<p>Maybe you wanna find a game of your favorite player's life? Jump in then!</p>
+<a href="/records"><button class="btn btn-primary" type="submit" value="player">Records</button></a>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<form action="/team" method="post">
+    <select class="form-select mx-auto choose" name="team">
+        <option disabled selected value="">Team</option>
+        {% for i in teams %}
+        <option value="{{ i.TEAM_ID }}" name="{{ i.TEAM_ID }}">{{ i.CITY }} {{ i.NICKNAME }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+        <select class="form-select mx-auto choose" name="season">
+        <option disabled selected value="">Season by Its First Year</option>
+        {% for j in seasons %}
+        <option value="{{ j.SEASON }}" name="{{ j.SEASON }}">{{ j.SEASON }}</option>
+        {% endfor %}
+        </select>
+    <br>
+    <br>
+        <select class="form-select mx-auto choose" name="specific">
+        <option disabled selected value="">What Would You Rather Like to See?</option>
+        <option value="scoring" name="scoring">High-Scoring Game</option>
+        <option value="clutch" name="clutch">Clutch Game</option>
+        <option value="ball" name="ball">Ball Moving</option>
+        </select>
+    <br>
+    <br>
+    <button class="btn btn-primary" type="submit">Let's Go!</button>
+</form>
+
+
+{% endblock %}

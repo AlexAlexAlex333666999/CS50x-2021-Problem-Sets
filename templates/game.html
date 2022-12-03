@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h2>We bet you'll love this one:</h2>
+
+<table class="table table-striped">
+<thead>
+    <tr>
+        <td><b>Date</b></td>
+        <td><b>Season</b></td>
+        <td><b>Away Team</b></td>
+        <td><b>Home Team</b></td>
+    </tr>
+</thead>
+    <tr>
+        <td>{{ game.GAME_DATE_EST }}</td>
+        <td>{{ game.SEASON }}</td>
+        <td>{{ game.away_city }} {{ game.away_nickname }}</td>
+        <td>{{ game.home_city }} {{ game.home_nickname }}</td>
+    </tr>
+    <tr>
+        <td colspan="4"><a href="https://www.youtube.com/results?search_query={{ game.GAME_DATE_EST }}+{{ game.away_city}}+{{ game.away_nickname }}+{{ game.home_city }}+{{ game.home_nickname }}" target="_blank"><button class="btn btn-primary" type="submit" value="team">Watch the game videos on YouTube</button></a></td>
+    </tr>
+</table>
+<p>Don't like this one? Give us another chance!</p>
+<a href="/"><button class="btn btn-primary" type="submit" value="team">Try Again!</button></a>
+
+{% endblock %}

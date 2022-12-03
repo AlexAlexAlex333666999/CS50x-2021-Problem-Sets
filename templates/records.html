@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h2>Player's Career Highs</h2>
+<p>Wanna check the highest-scoring game for Stephen Curry? What about Rajon Rondo and his assisting record?</p>
+<p>Choose a player and career-high that you would like to find.</p>
+<form action="/records" method="post">
+    <input autocomplete="off" autofocus class="form-control" name="player" placeholder="Player First and Last Name" type="text">
+    <br>
+    <br>
+    <select class="form-select mx-auto choose" name="record">
+        <option disabled selected value="">Record</option>
+        <option value="Points" name="Points">Points</option>
+        <option value="Assists" name="Assists">Assists</option>
+        <option value="Rebounds" name="Rebounds">Rebounds</option>
+        <option value="Steals" name="Steals">Steals</option>
+        <option value="Blocks" name="Blocks">Blocks</option>
+    </select>
+    <br>
+    <br>
+    <button class="btn btn-primary" type="submit">Let's Go!</button>
+</form>
+
+{% endblock %}

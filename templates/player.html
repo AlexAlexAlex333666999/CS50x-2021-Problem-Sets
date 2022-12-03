@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<form action="/player" method="post">
+    <input autocomplete="off" autofocus class="form-control" name="player" placeholder="Player First and Last Name" type="text">
+    <br>
+    <br>
+        <select class="form-select mx-auto choose" name="season">
+        <option disabled selected value="">Season by Its First Year</option>
+        {% for j in seasons %}
+        <option value="{{ j.SEASON }}" name="{{ j.SEASON }}">{{ j.SEASON }}</option>
+        {% endfor %}
+        </select>
+    <br>
+    <br>
+        <select class="form-select mx-auto choose" name="specific">
+        <option disabled selected value="">What Would You Rather Like to See?</option>
+        <option value="scoring" name="scoring">Scoring</option>
+        <option value="assist" name="assist">Assisting</option>
+        <option value="boards" name="boards">Crashing Boards</option>
+        <option value="around" name="around">All Around Game</option>
+        <option value="eff" name="eff">High Efficiency</option>
+        </select>
+    <br>
+    <br>
+    <button class="btn btn-primary" type="submit">Let's Go!</button>
+
+</form>
+
+
+{% endblock %}
