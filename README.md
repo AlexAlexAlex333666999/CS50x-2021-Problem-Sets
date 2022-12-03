@@ -1,6 +1,6 @@
 # Volume Problem Set
 ## Task
-The task was to write a program that modifies the volume of an input audio file in the WAV format. 
+The task was to write a program that modifies the volume of an inputted audio file in the WAV format. 
 The program takes three command-line arguments:
 - **input** represents the name of the original audio file 
 - **output** represents the name of the new audio file that should be generated
